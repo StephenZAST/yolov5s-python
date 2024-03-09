@@ -1,0 +1,23 @@
+Introduction
+Le projet consistait à développer un programme utilisant le modèle YOLOv5 pour l’analyse d’images et de vidéos. L’objectif était de permettre au programme de déterminer si l’entrée est une URL de vidéo ou un chemin local vers une image ou une vidéo, et de procéder à l’analyse en conséquence.
+
+Problèmes rencontrés et solutions
+Interprétation des chaînes de caractères en Python : L’un des problèmes rencontrés était lié à l’interprétation des chaînes de caractères en Python. Les chemins de fichiers Windows utilisent des barres obliques inverses (\), qui sont également utilisées pour les séquences d’échappement en Python. Pour résoudre ce problème, nous avons utilisé des chaînes de caractères brutes (raw strings) en préfixant la chaîne de caractères avec un r, ou en doublant les barres obliques inverses.
+Ouverture de fichiers avec OpenCV : Un autre problème rencontré était que OpenCV ne pouvait pas ouvrir le fichier à l’emplacement spécifié. Nous avons résolu ce problème en vérifiant que le chemin du fichier était correct, que le fichier existait, qu’il n’était pas corrompu et qu’il était dans un format pris en charge par OpenCV.
+Analyse de plusieurs images à la fois : Vous vouliez que le programme puisse analyser plusieurs images à la fois. Pour cela, nous avons modifié le programme pour accepter un dossier d’images en entrée, puis analyser chaque image dans ce dossier.
+Ce que vous avez appris
+Vous avez appris comment utiliser le modèle YOLOv5 pour l’analyse d’images et de vidéos.
+Vous avez appris comment gérer les chaînes de caractères et les chemins de fichiers en Python.
+Vous avez appris comment utiliser OpenCV pour lire des images et des vidéos.
+Vous avez appris comment modifier votre programme pour analyser plusieurs images à la fois.
+
+--------------------------------------------------------------------------------------------------------------
+
+voici un résumé des défis que nous avons rencontrés et comment nous les avons surmontés :
+
+Compréhension du code original : Le code fourni était bien commenté, ce qui a facilité la compréhension de son fonctionnement. Cependant, il a fallu analyser chaque fonction pour comprendre exactement ce qu’elle faisait et comment elle contribuait à l’ensemble du processus de détection d’objets.
+Utilisation d’une vidéo locale au lieu de la webcam : Le code original était configuré pour utiliser la webcam pour le flux vidéo. Nous avons dû modifier le code pour qu’il utilise une vidéo locale à la place. Cela a été réalisé en changeant l’argument passé à cv2.VideoCapture().
+Affichage des images : Le code original utilisait cv2.imshow() pour afficher chaque image traitée. Cela a posé problème car une nouvelle fenêtre était ouverte pour chaque image, ce qui rendait le processus lent et difficile à gérer. Nous avons résolu ce problème en utilisant le même nom de fenêtre dans cv2.imshow(), ce qui a permis de mettre à jour la même fenêtre avec chaque nouvelle image.
+Installation des dépendances : Pour exécuter le script, il était nécessaire d’installer certaines bibliothèques Python. Nous avons fourni les commandes pour installer ces bibliothèques via pip.
+Erreurs OpenCV : Vous avez rencontré une erreur liée à cv2.imshow(). Nous avons expliqué que cette fonction nécessite une interface graphique pour fonctionner et avons suggéré des solutions possibles, comme l’utilisation d’une version différente d’OpenCV ou l’enregistrement des images sur le disque au lieu de les afficher.
+Explication de CUDA : Vous avez demandé une explication sur l’utilisation de CUDA dans le script. Nous avons expliqué que CUDA est une plateforme de calcul parallèle créée par NVIDIA qui permet d’utiliser le GPU pour effectuer des calculs généraux, ce qui peut accélérer considérablement les tâches de vision par ordinateur et d’apprentissage en profondeur.
