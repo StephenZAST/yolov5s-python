@@ -11,15 +11,18 @@ Caractéristiques
 Détection d’objets dans les images : Les utilisateurs peuvent analyser une image individuelle à partir d’un chemin local ou d’une URL. L’application peut également analyser toutes les images dans un dossier local.
 Détection d’objets dans les vidéos : Les utilisateurs peuvent analyser une vidéo individuelle à partir d’un chemin local ou d’une URL de streaming.
 Détection d’objets en temps réel avec une webcam : Les utilisateurs peuvent lancer la webcam de leur ordinateur pour effectuer une détection d’objets en temps réel.
-Interface utilisateur graphique : L’application offre une interface utilisateur graphique conviviale, permettant aux utilisateurs de facilement choisir les images ou les vidéos à analyser et de visualiser les résultats.
+
+Interface utilisateur graphique : 
+
+L’application offre une interface utilisateur graphique conviviale, permettant aux utilisateurs de facilement choisir les images ou les vidéos à analyser et de visualiser les résultats.
 Utilisation
 Après avoir cloné le dépôt, vous pouvez exécuter l’application en utilisant la commande suivante :
 
-python main.py
+python component.py
 
 Dans l’interface utilisateur, vous pouvez naviguer entre les onglets pour choisir le type d’analyse que vous souhaitez effectuer (image, vidéo, ou webcam). Vous pouvez entrer une URL ou utiliser le bouton “Importer” pour choisir un fichier local. Ensuite, cliquez sur le bouton “Détecter” pour lancer la détection d’objets.
 
-Dépendances
+Dépendances :
 Ce projet utilise les bibliothèques suivantes :
 
 Python 3.8+
